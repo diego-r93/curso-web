@@ -3,9 +3,6 @@ const porta = 3003
 const express = require('express')
 const app = express()
 
-// const bodyParser = require('body-parser') // Descontinuado
-// app.use(bodyParser.urlencoded({ extended: true}))
-
 const bancoDeDados = require('./bancoDeDados')
 
 app.use(express.urlencoded({ extended: true }))
