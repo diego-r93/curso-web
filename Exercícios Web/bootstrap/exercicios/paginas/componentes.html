@@ -1,9 +1,9 @@
-<div class="jumbotron p-4 my-1">
+<div class="p-4 my-1 bg-light rounded-3">
     <h1 class="display-5">Componentes</h1>
     <p class="lead m-1">Exemplo de alguns componentes do Bootstrap.</p>
 </div>
 
-<nav class="mb-5">
+<nav class="mb-5 bg-light rounded-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="#/paginas/bemVindo.html">Home</a>
@@ -14,7 +14,7 @@
 
 <h1>1. Botões -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/buttons/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
@@ -36,17 +36,19 @@
     </div>
 
     <div class="dropdown">
-        <button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">Comprar</button>
-        <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Paypal</a>
-            <a href="#" class="dropdown-item">Pagseguro</a>
-        </div>
+        <a class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">
+            Comprar!
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Paypal</a></li>
+            <li><a class="dropdown-item" href="#">Pagseguro</a></li>
+        </ul>
     </div>
 </div>
 
 <h1 class="mt-5">2. Progresso -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/progress/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/progress/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
@@ -71,7 +73,7 @@
 
 <h1 class="mt-5">3. Mensagens (Alertas) -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/alerts/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
@@ -96,15 +98,13 @@
     </div>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 </div>
 
 <h1 class="mt-5">4. Paginação -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/pagination/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/pagination/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
@@ -140,7 +140,7 @@
 
 <h1 class="mt-5">5. Tooltip -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/tooltip/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/tooltips/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
@@ -151,16 +151,14 @@
         Precisa chamar uma função JS!
         <strong>E agora?</strong>
     </div>
-    <button class="btn btn-danger"
-        data-toggle="tooltip" data-placement="right"
-        title="Pense antes!">
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Pense antes!">
         Excluir
     </button>
 </div>
 
 <h1 class="mt-5">6. Slider -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/carousel/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/carousel/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
@@ -179,68 +177,78 @@
                 <img src="/imgs/slide3.png" alt="Slide3" class="d-block mx-auto">
             </div>
         </div>
-        <a href="#slider" class="carousel-control-prev" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a href="#slider" class="carousel-control-next" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
 <h1 class="mt-5">7. Accordion -
     <small>
-        <a href="https://getbootstrap.com/docs/4.0/components/collapse/" target="_black">Documentação Oficial</a>
+        <a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_black">Documentação Oficial</a>
     </small>
 </h1>
 <hr>
 
 <!-- Accordion -->
-<div>
-    <div class="mb-5" id="accordion">
-       <div class="card">
-           <div class="card-header" id="pergunta1">
-               <h5 class="mb-0">
-                   <button class="btn btn-link" data-toggle="collapse" data-target="#resposta1">
-                       Quem é o professor de programação mais legal?
-                   </button>
-               </h5>
-           </div>
-           <div class="collapse" id="resposta1" data-parent="#accordion">
-               <div class="card-body">
-                   Posso dizer? :)
-               </div>
-           </div>
-       </div> 
-       <div class="card">
-           <div class="card-header" id="pergunta2">
-               <h5 class="mb-0">
-                   <button class="btn btn-link" data-toggle="collapse" data-target="#resposta2">
-                       Teste 2?
-                   </button>
-               </h5>
-           </div>
-           <div class="collapse" id="resposta2" data-parent="#accordion">
-               <div class="card-body">
-                   Teste 2!
-               </div>
-           </div>
-           <div class="card-header" id="pergunta3">
-               <h5 class="mb-0">
-                   <button class="btn btn-link" data-toggle="collapse" data-target="#resposta3">
-                       Teste 3?
-                   </button>
-               </h5>
-           </div>
-           <div class="collapse" id="resposta3" data-parent="#accordion">
-               <div class="card-body">
-                   Teste 3!
-               </div>
-           </div>
-       </div> 
+<div class="accordion mb-5" id="accordionExample">
+    <div class="accordion-item">
+        <h5 class="accordion-header mb-0" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Quem é o professor de programação mais legal?
+            </button>
+        </h5>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Posso dizer? :)
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h5 class="accordion-header mb-0" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Teste 2?
+            </button>
+        </h5>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Teste 2!
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h5 class="accordion-header mb-0" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Teste 3?
+            </button>
+        </h5>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Teste 3!
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    $('[data-toggle="tooltip"]').tooltip()
+    var dropdownElementList = [].slice.call(document.querySelectorAll('[data-toggle="dropdown"]'))
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl)
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 </script>
