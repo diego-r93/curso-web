@@ -1,8 +1,8 @@
 const modoDev = process.env.NODE_ENV !== 'production'
 const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const TerserPlugin = require('terser-webpack-plugin')
-const CSSMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 
 
 
@@ -29,7 +29,7 @@ module.exports = {
                ecma: 6,
             }
          }),
-         new CSSMinimizerWebpackPlugin({})
+         new CssMinimizerPlugin({})
       ]
    },
    plugins: [
@@ -46,6 +46,6 @@ module.exports = {
             'css-loader', // interpreta @import, url()...
             'sass-loader',
          ]
-      },]
+      }]
    }
 }
